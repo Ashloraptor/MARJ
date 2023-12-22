@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Place</title>
+    <link rel="stylesheet" type="text/css" href="./Assets/style.css"/>
+    
+</head>
+<body>
+    <header>
+        <h1>Recipe Place</h1>
+        <!--Nav bar remains hidden until viewport is tablet/mobile size-->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipe-search">Recipe Search</a></li>
+                <li><a href="#list">List</a></li>
+                <li><a href="#favorite-recipes">Favorite Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Recipe Search form-->
+        <section>
+            <div>
+            <aside>
+                <form id="search-form">
+                    <h2>Recipe Search</h2>
+                    <input type="text" id="search-input" name="search">
+                    <button class="btn btn-info" onclick="logMessage()">Search</button>
+                </form>
+            </aside>
+            </div>
+        </section>
+        <!--Filter checkbox section-->
+        <section>
+            <div>
+            <aside>
+                <h3>Filter results</h3>
+                <h4>Allergens:</h4>
+                <input type="checkbox" id="allergen1" name="allergen1" value="tree-nut">
+                <label for="allergen1">Tree nut</label><br>
+                <input type="checkbox" id="allergen2" name="allergen2" value="peanut">
+                <label for="allergen2">Peanut</label><br>
+                <input type="checkbox" id="allergen3" name="allergen3" value="soy">
+                <label for="allergen3">Soy</label><br>
+                <input type="checkbox" id="allergen4" name="allergen4" value="dairy">
+                <label for="allergen4">Dairy</label><br>
+                <input type="checkbox" id="allergen5" name="allergen5" value="gluten">
+                <label for="allergen5">Gluten</label><br>
+                <input type="checkbox" id="allergen6" name="allergen6" value="shellfish">
+                <label for="allergen6">Shellfish</label><br>
+            </aside>
+            </div>
+        </section>
+
+        <section>
+            <!--Recipe cards, center column-->
+            <div></div>
+        </section>
+
+        <section>
+            <h2>Grocery List</h2>
+            <!--Checkboxes entered via Javascript in response to user selection made in Recipe card-->
+        </section>
+
+        <section>
+            <h2>Favorites</h2>
+            <!--hyperlinks for bookmarked recipes-->
+        </section>
+
+    </main>
+
+<script src="./Assets/script.js"></script>
+</body>
+</html>
