@@ -22,19 +22,23 @@ body {
 /* Style the header */
 header {
     font-family: century;
-    font-size: 2rem;
+    font-size: 1rem;
     background-color: greenyellow;
-    color: #fff;
+    color: white;
     text-align: center;
     margin: 10px 0px;
     padding: 15px 
      
 }
-
+.btn:hover{
+    cursor: pointer;
+}
 header h1 {
     margin: 0;
     font-size: 36px; 
 }
+/* style the fa fas-align-justify */
+.h1
 .btn{
     cursor: pointer;
     background-color: transparent;
