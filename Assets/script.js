@@ -1,6 +1,7 @@
 var searchHistory = [];
 var searchForm = document.getElementById("search-form");
 var searchInput = document.getElementById("search-input");
+//var apiUrl = 
 
 //Form function
 function logMessage(event) {
@@ -16,4 +17,22 @@ function logMessage(event) {
 
   }
 
+  function fetchRecipes(){
+    //APIKey
+    //var apiURL = 
+
+    fetch(apiUrl)
+    .then(function(res){
+        return res.json();
+    })
+    .then(function (data) {
+        renderItems();
+    })
+    .catch(function (err) {
+        console.error(err);
+    })
+  }
+
+  //initFavoritesHistory
+  //initGroceryList
   searchForm.addEventListener("submit", logMessage);
