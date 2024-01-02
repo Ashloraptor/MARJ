@@ -1,7 +1,12 @@
 var searchHistory = [];
 var searchForm = document.getElementById("search-form");
 var searchInput = document.getElementById("search-input");
+//URL for Edamam API:
 //var apiUrl = 
+
+//var apiKey = "&appid="
+//var parameter = (query select checked boxes, include "&" in the string)
+//var url = apiUrl + apiKey + parameters
 
 //function searchRecipes(){}
 
