@@ -6,13 +6,11 @@ var searchInput = document.getElementById("search-input");
 //function searchRecipes(){}
 
 /*function renderFavoritesHistory(){
-
 //card elements
 var col = document.createElement('div');
 var card = document.createElement('div');
 var cardBody = document.createElement('div');
 var cardTitle = document.createElement('h5');
-
 //incorporate cards
 col.append(card);
 card.append(cardBody);
@@ -20,13 +18,11 @@ cardBody.append(cardTitle);
 }*/
 
 /*function renderGroceryList(){
-
 //card elements
 var col = document.createElement('div');
 var card = document.createElement('div');
 var cardBody = document.createElement('div');
 var cardTitle = document.createElement('h5');
-
 //incorporate cards
 col.append(card);
 card.append(cardBody);
