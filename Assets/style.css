@@ -137,20 +137,41 @@ h3, h4 {
     font-family: century;
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: seagreen;
     text-align: left;
     margin: 10px 0px;
     padding: 5px 
 }
 
 /* Style the Allergens  section */
+
+
+
+
 h4{
     font-family: century;
     font-size: 2rem;
-    color: #f8f8f8;
+    color: seagreen;
+    
 }
+.filters {
 
-
+    flex: 1 0 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 50px;
+    background-image: url(./listbackground.jpg);
+    background-size: cover;
+    margin: 10px 0;
+    border: .5px solid seagreen;
+    position: relative;
+    z-index: 1;
+    overflow:hidden;
+   
+}
 
 /* Style the checkboxes */
 input[type="checkbox"] {
@@ -162,6 +183,8 @@ input[type="checkbox"] {
     margin: 15px ;
     padding: 15px 
 }
+
+
 
 /* Style the grocery list and favorites sections */
 h2 {
