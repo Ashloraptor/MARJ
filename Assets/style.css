@@ -154,24 +154,7 @@ h4{
     color: seagreen;
     
 }
-.filters {
 
-    flex: 1 0 40%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    flex-direction: column;
-    padding: 30px;
-    border-radius: 50px;
-    background-image: url(./listbackground.jpg);
-    background-size: cover;
-    margin: 10px 0;
-    border: .5px solid seagreen;
-    position: relative;
-    z-index: 1;
-    overflow:hidden;
-   
-}
 
 /* Style the checkboxes */
 input[type="checkbox"] {
@@ -188,8 +171,11 @@ input[type="checkbox"] {
 
 /* Style the grocery list and favorites sections */
 h2 {
+    
+    color: seagreen;
     border-bottom: 1px solid #333;
     padding-bottom: 5px;
     margin-bottom: 10px;
     text-align: center;
 }
+
