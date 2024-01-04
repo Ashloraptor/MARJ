@@ -23,7 +23,7 @@ body {
 header {
     font-family: century;
     font-size: 1rem;
-    background-color: greenyellow;
+    background-color: seagreen;
     color: white;
     text-align: center;
     margin: 10px 0px;
@@ -167,15 +167,26 @@ input[type="checkbox"] {
     padding: 15px 
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
 
+.col {
+  display: flex;
+  justify-content: space-between;
+
+
+    
+}
 
 /* Style the grocery list and favorites sections */
 h2 {
     
-    color: seagreen;
+    color:white ;
     border-bottom: 1px solid #333;
     padding-bottom: 5px;
     margin-bottom: 10px;
-    text-align: center;
+    
 }
 
