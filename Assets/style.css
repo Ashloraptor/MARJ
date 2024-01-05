@@ -26,7 +26,7 @@ html{
 header {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
-    background-color: greenyellow;
+    background-color: seagreen;
     color: white;
     text-align: center;
     margin: 10px 0px;
@@ -144,21 +144,23 @@ h3, h4 {
     font-family: century;
     font-size: 2rem;
     margin-bottom: 10px;
-    color: white;
+    color: seagreen;
     text-align: left;
     margin: 10px 0px;
     padding: 5px 
 }
 
 /* Style the Allergens  section */
+
+
+
+
 h4{
     font-family: century;
     font-size: 2rem;
-    color: white;
-    padding: 2px;
-    background:scrol;
+    color: seagreen;
+    
 }
-
 
 
 /* Style the checkboxes */
@@ -172,6 +174,18 @@ input[type="checkbox"] {
     padding: 15px 
 }
 
+.container {
+    display: flex;
+}
+
+.col {
+  display: flex;
+  justify-content: space-between;
+
+
+    
+}
+
 /* Style the grocery list and favorites sections */
 h2 {
     border-bottom: 1px solid white;
@@ -179,3 +193,4 @@ h2 {
     margin-bottom: 15px;
     text-align: center;
 }
+
