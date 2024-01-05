@@ -169,7 +169,6 @@ input[type="checkbox"] {
 
 .container {
     display: flex;
-    justify-content: space-between;
 }
 
 .col {
