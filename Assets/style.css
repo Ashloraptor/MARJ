@@ -189,10 +189,10 @@ h2 {
 
 .col {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row;
-    justify-content: baseline;
-    margin-top: 5px;
-    border: black;
+    align-items: flex-start;
+
 
 }
+
