@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function exportToGroceryList(ingredients) {
         console.log("Exported to Grocery List:", ingredients);
         // You can further implement logic to use the ingredients as needed
+        
     }
 
     function saveRecipe(recipe) {
