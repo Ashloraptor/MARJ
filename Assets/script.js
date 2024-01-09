@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectedAllergens = getSelectedAllergens();
             fetchRecipes(searchTerm, selectedAllergens);
         });
-    } else {
-        console.log("Form element with id 'search-form' not found");
-    }
+    } 
 
     allergenCheckboxes.forEach(function (checkbox) {
         checkbox.addEventListener("change", function () {
@@ -37,18 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
             saveRecipe(recipeDetails); 
             console.log("Saved Recipes:", savedRecipes);
         });
-    } else {
-        console.log("Button element with id 'saveRecipeButton' not found");
-    }
+    } 
 
     if (generateShoppingListButton) {
         generateShoppingListButton.addEventListener("click", function () {
             const shoppingListIngredients = getShoppingListIngredients(savedRecipes);
             console.log("Shopping List Ingredients:", shoppingListIngredients);
         });
-    } else {
-        console.log("Button element with id 'generate-shopping-list' not found");
-    }
+    } 
 
     function fetchRecipes(searchTerm, allergens) {
         fetch(`https://api.edamam.com/search?q=${searchTerm}&app_id=75b0bb55&app_key=ce256a7a59e8a07cbf31e8b3a399b9b4&from=0&to=10`)
