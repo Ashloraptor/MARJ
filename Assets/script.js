@@ -1,64 +1,85 @@
-var searchHistory = [];
+var searchRecpies = [];
+var savedRecipes = [];
 var searchForm = document.getElementById("search-form");
 var searchInput = document.getElementById("search-input");
-//var apiUrl = 
 
-//function searchRecipes(){}
+document.addEventListener("DOMContentLoaded", function () {
+    const searchForm = document.getElementById("search-form");
+    const searchInput = document.getElementById("search-input");
+    const allergenCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+    const saveRecipeButton = document.getElementById("saveRecipeButton");
+    const generateShoppingListButton = document.getElementById("generate-shopping-list");
+    const recipeList = document.getElementById("recipe-list");
 
-/*function renderFavoritesHistory(){
-//card elements
-var col = document.createElement('div');
-var card = document.createElement('div');
-var cardBody = document.createElement('div');
-var cardTitle = document.createElement('h5');
-//incorporate cards
-col.append(card);
-card.append(cardBody);
-cardBody.append(cardTitle);
-}*/
+    let savedRecipes = ['Recipe1', 'Recipe2', 'Recipe3'];
 
-/*function renderGroceryList(){
-//card elements
-var col = document.createElement('div');
-var card = document.createElement('div');
-var cardBody = document.createElement('div');
-var cardTitle = document.createElement('h5');
-//incorporate cards
-col.append(card);
-card.append(cardBody);
-cardBody.append(cardTitle);
-}*/
+    if (searchForm) {
+        searchForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const searchTerm = searchInput.value;
+            const selectedAllergens = getSelectedAllergens();
+            fetchRecipes(searchTerm, selectedAllergens);
+        });
+    } 
 
-//Form function
-function logMessage(event) {
-    // Prevent the default form submission
-    event.preventDefault();
-    // Retrieve the input value
-    var inputValue = searchInput.value.trim();
-    // Log the message to the console
-    console.log("You searched for: " + inputValue);
+    allergenCheckboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            const searchTerm = searchInput.value;
+            const selectedAllergens = getSelectedAllergens();
+            fetchRecipes(searchTerm, selectedAllergens);
+        });
+    });
 
-    searchInput.value = '';
-    //callback to search function (the one that does the fetch request). Include parameter "input value"
+    if (saveRecipeButton) {
+        saveRecipeButton.addEventListener("click", function () {
+            saveRecipe(recipeDetails); 
+            console.log("Saved Recipes:", savedRecipes);
+        });
+    } 
 
-}
+    if (generateShoppingListButton) {
+        generateShoppingListButton.addEventListener("click", function () {
+            const shoppingListIngredients = getShoppingListIngredients(savedRecipes);
+            console.log("Shopping List Ingredients:", shoppingListIngredients);
+        });
+    } 
 
-function fetchRecipes() {
-    //APIKey
-    //var apiURL = 
+    function fetchRecipes(searchTerm, allergens) {
+        fetch(`https://api.edamam.com/search?q=${searchTerm}&app_id=75b0bb55&app_key=ce256a7a59e8a07cbf31e8b3a399b9b4&from=0&to=10`)
+            .then(response => response.json())
+            .then(data => {
+                displayRecipes(data.hits);
+            })
+            .catch(error => console.error("Error fetching recipes:", error));
+    }
 
-    fetch(apiUrl)
-        .then(function (res) {
-            return res.json();
-        })
-        .then(function (data) {
-            renderItems();
-        })
-        .catch(function (err) {
-            console.error(err);
-        })
-}
+    function getSelectedAllergens() {
+        return Array.from(allergenCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+    }
 
-//initFavoritesHistory
-//initGroceryList
-searchForm.addEventListener("submit", logMessage);
+    function displayRecipes(hits) {
+        console.log("Displaying Recipes:", hits);
+        recipeList.innerHTML = "";
+        hits.forEach(hit => {
+            const recipeName = hit.recipe.label;
+            const recipeIngredients = hit.recipe.ingredients.map(ingredient => ingredient.text).join(', ');
+            const listItem = document.createElement("li");
+            listItem.textContent = `${recipeName}: ${recipeIngredients}`;
+            recipeList.appendChild(listItem);
+        });
+    }
+
+    function saveRecipe(recipe) {
+        savedRecipes.push(recipe);
+    }
+
+    function getShoppingListIngredients(recipes) {
+        const shoppingListIngredients = [];
+        recipes.forEach(function (recipe) {
+            shoppingListIngredients.push(...recipe.ingredients);
+        });
+        return shoppingListIngredients;
+    }
+});

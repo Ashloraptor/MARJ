@@ -9,19 +9,22 @@ body {
 /* Apply a background color to the body */
 body {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
-    background: Url('./marj1.jpg');
-    height: 900px;
+    background: Url('./marj1.jpg') no-repeat content-box;
+    height: 640px;
     width: 100%;
     z-index: -1;
-    opacity: .8;
+    opacity: 1;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 /* Style the header */
 header {
-    font-family: century;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     background-color: seagreen;
     color: white;
@@ -61,7 +64,7 @@ nav {
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: rgba(0, 0, 0, 0.005);
+     background-color: white(0, 0, 0, 0.005);
      position: sticky;
     margin-top: 10px;
     top: 0;
@@ -85,7 +88,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 8px 20px;
     font-weight: bold;
     transition: all 0.5s;
@@ -105,8 +108,8 @@ main {
     }
     .btn{
         padding: 10px 35px;
-        background-color: black;
-        border: 1px solid white;
+        background-color: orange;
+        border: 1px solid black;
         color: white;
         outline: none;
         transition: 6s ease;
@@ -116,19 +119,23 @@ main {
         background-color: black;
         border: 1px solid white;
         color: black;
-        box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+        box-shadow: 0 0 5px black, 0 0 10px white, 0 0 15px white;
         font-weight: bold;
     }
 }
 
 /* Style the search form */
 #search-form {
+    display: flex;
+    min-width: 50px;
     margin-bottom: 20px;
+    color: beige;
+    font: bold;
     
 }
 
 #search-input {
-    padding: 5px;
+    padding: 20px;
     width: 200px;
 }
 
@@ -161,7 +168,7 @@ input[type="checkbox"] {
     font-family: century;
     font-size: 1rem;
     margin-right: 15px;
-    color: #fff;
+    color: black;
     text-align: center;
     margin: 15px ;
     padding: 15px 
@@ -181,11 +188,9 @@ input[type="checkbox"] {
 
 /* Style the grocery list and favorites sections */
 h2 {
-    
-    color:white ;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
