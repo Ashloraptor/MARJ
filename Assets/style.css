@@ -178,13 +178,6 @@ input[type="checkbox"] {
     display: flex;
 }
 
-.col {
-  display: flex;
-  justify-content: space-between;
-
-
-    
-}
 
 /* Style the grocery list and favorites sections */
 h2 {
@@ -194,3 +187,12 @@ h2 {
     text-align: center;
 }
 
+.col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-content: baseline;
+    margin-top: 5px;
+    border: black;
+
+}
