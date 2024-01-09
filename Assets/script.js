@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const recipeList = document.getElementById("recipe-list");
 
     let savedRecipes = ['Recipe1', 'Recipe2', 'Recipe3'];
+});
 
     if (searchForm) {
         searchForm.addEventListener("submit", function (event) {
@@ -71,15 +72,58 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function saveRecipe(recipe) {
-        savedRecipes.push(recipe);
-    }
-
-    function getShoppingListIngredients(recipes) {
-        const shoppingListIngredients = [];
-        recipes.forEach(function (recipe) {
-            shoppingListIngredients.push(...recipe.ingredients);
-        });
-        return shoppingListIngredients;
-    }
-});
+    document.addEventListener("DOMContentLoaded", function () {
+        function displayRecipes(hits) {
+            console.log("Displaying Recipes:", hits);
+            const recipeList = document.getElementById("recipe-list");
+            recipeList.innerHTML = "";
+            hits.forEach(hit => {
+                const recipeName = hit.recipe.label;
+                const recipeIngredients = hit.recipe.ingredients.map(ingredient => ingredient.text).join(', ');
+                const listItem = document.createElement("li");
+    
+                const exportButton = document.createElement("button");
+                exportButton.textContent = "Export to Grocery List";
+                exportButton.addEventListener("click", function () {
+                    exportToGroceryList(hit.recipe.ingredients);
+                });
+    
+                const saveButton = document.createElement("button");
+                saveButton.textContent = "Save";
+                saveButton.addEventListener("click", function () {
+                    saveRecipe(hit.recipe);
+                });
+    
+                listItem.textContent = `${recipeName}: ${recipeIngredients}`;
+                listItem.appendChild(exportButton);
+                listItem.appendChild(saveButton);
+                recipeList.appendChild(listItem);
+            });
+        }
+    
+        function exportToGroceryList(ingredients) {
+            console.log("Exported to Grocery List:", ingredients);
+        }
+    
+        function saveRecipe(recipe) {
+            savedRecipes.push(recipe);
+            const favoritesCard = document.getElementById("favorites-card");
+            const recipeLink = document.createElement("button");
+            recipeLink.textContent = `View ${recipe.label}`;
+            recipeLink.addEventListener("click", function () {
+                console.log("Viewing saved recipe:", recipe);
+            });
+    
+            favoritesCard.appendChild(recipeLink);
+        }
+    
+        function getShoppingListIngredients(recipes) {
+            const shoppingListIngredients = [];
+            recipes.forEach(function (recipe) {
+                shoppingListIngredients.push(...recipe.ingredients);
+            });
+            return shoppingListIngredients;
+        }
+    
+    
+    });
