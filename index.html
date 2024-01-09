@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Place</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/style.css">
+    <title>Document</title>
+    
 </head>
-
 <body>
-    <header>
-        <h1>Recipe Place</h1>
-        <!--Nav bar remains hidden until viewport is tablet/mobile size-->
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#recipe-search">Recipe Search</a></li>
-                <li><a href="#list">List</a></li>
-                <li><a href="#favorite-recipes">Favorite Recipes</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Recipe Place</h1>
+            <nav>
+            <div class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#recipe-search">Recipe Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#List">List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#favorite-recipes">Favorite Recipes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        
+            </nav>
+        </header>
 
-    <main>
-        <!--Recipe Search form-->
-        <section>
-            <div>
-                <aside>
+        <main>
+            <section class="row">
+                <div class="col-4">
+                    <div id="recipe-search">
                     <form id="search-form">
-                        <h2>Recipe Search</h2>
-                        <input type="text" id="search-input" name="search">
+                        <h2> Recipe Search</h2>
+                        <input type="text" id="search-input" name="search"/>
                         <button class="btn btn-info">Search</button>
                     </form>
+<<<<<<< HEAD
                 </aside>
             </div>
         </section>
@@ -64,14 +76,27 @@
             <div class="container">
                 <div class="col">
                     <div class="card">
-                        <div class="card-body">
+=======
+                </div>
+                </div>
 
-                            <h3>Grocery List</h3>
-                            <!--Checkboxes entered via Javascript in response to user selection made in Recipe card-->
+                
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+>>>>>>> 56f6e2382c8a4d2372e5b1c11e67c994bbbb5779
+                        <div class="card-body">
+                            <div id="recipe-list">
+                            <h5 class="card-title">Recipe List</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
                         </div>
                     </div>
                 </div>
+                </div>
 
+<<<<<<< HEAD
         </section>
 
         <section>
@@ -90,6 +115,39 @@
     </main>
 
     <script src="./Assets/script.js"></script>
+=======
+                
+                <div class="col-md-4 flex-row-reverse">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div id="grocery-list">
+                            <h5 class="card-title">Grocery List</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                    </div>
+                
+                
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div id= "favorites">
+                            <h5 class="card-title">Favorites</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./Assets/script2.js"></script>
+>>>>>>> 56f6e2382c8a4d2372e5b1c11e67c994bbbb5779
 </body>
-
 </html>

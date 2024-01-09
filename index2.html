@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Place</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./Assets/style.css" /> -->
+
+</head>
+
+<body>
+<header>
+        <h1>Recipe Place</h1>
+        <!--Nav bar remains hidden until viewport is tablet/mobile size-->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipe-search">Recipe Search</a></li>
+                <li><a href="#list">List</a></li>
+                <li><a href="#favorite-recipes">Favorite Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Recipe Search form-->
+        <section>
+            <form  id="search-form">
+                <h2> Recipe Search</h2>
+
+                   
+                        <input type="text" id="search-input" name="search">               
+
+                    <button class="btn btn-info">Search</button>
+
+
+            
+                    
+        
+            </form>
+        </section>
+        <!--Filter checkbox section-->
+        
+
+        <section>
+            <!--Recipe cards, center column-->
+            <ul id="recipe-list"></ul>
+        </section>
+
+        <section>
+
+            <div class="container">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h3>Grocery List</h3>
+                            <!--Checkboxes entered via Javascript in response to user selection made in Recipe card-->
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+
+
+
+                                <h3>Favorites</h3>
+                                <!--hyperlinks for bookmarked recipes-->
+        </section>
+
+    </main>
+
+    <script src="./Assets/script.js"></script>
+</body>
+
+</html>

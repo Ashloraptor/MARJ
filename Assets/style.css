@@ -1,0 +1,24 @@
+body {
+    background-color: seagreen;
+    width: 100%;
+
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+}
+
+.btn {
+    background-color: greenyellow;
+    font-size: 16px;
+    font-weight: 600;
+    border: black;
+}
+input #input-search {
+    border-radius: 5px;
+}
+
+.card {
+    
+}
