@@ -93,7 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Viewing saved recipe:", recipe);
         });
 
-        favoritesCard.appendChild(recipeLink);
+          //favoritesCard.appendChild(recipeLink);
+          console.log(recipeLink);
     }
 
     function getShoppingListIngredients(recipes) {
