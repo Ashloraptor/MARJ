@@ -100,8 +100,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function saveRecipeToFavorites(recipe) {
         savedRecipes.push(recipe);
-        const recipeLink = createButton(`View ${recipe.label}`, () => console.log("Viewing saved recipe:", recipe));
+        const recipeLink = createButton(`View ${recipe.label}`, () => viewSavedRecipe(recipe));
         favoritesCard.appendChild(recipeLink);
     }
-
+    
+    function viewSavedRecipe(recipe) {
+        const savedRecipeDetails = document.getElementById("saved-recipe-details");
+        savedRecipeDetails.innerHTML = '';
+    
+        const recipeNameElement = document.createElement('h2');
+        recipeNameElement.textContent = recipe.label;
+    
+        const ingredientsList = document.createElement('ul');
+        recipe.ingredients.forEach(ingredient => {
+            const listItem = document.createElement('li');
+            listItem.textContent = ingredient.text;
+            ingredientsList.appendChild(listItem);
+        });
+    
+        savedRecipeDetails.appendChild(recipeNameElement);
+        savedRecipeDetails.appendChild(ingredientsList);
+    }
 });
