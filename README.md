@@ -16,5 +16,5 @@ We created this application to help people with making grocery shopping and dinn
 <br>We used their Recipe Search API and their Food Database API
 <br><h4>Screenshot:</h4>
 <br><img src="/Assets/screenshot.png">
-<br>Deployed link:
+<br>Deployed link: https://ashloraptor.github.io/MARJ/
 <br>Repo link: https://github.com/Ashloraptor/MARJ
