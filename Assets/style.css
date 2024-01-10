@@ -1,14 +1,39 @@
 body {
     background-color: seagreen;
     width: 100%;
+    
 
 }
+
+p {
+    border: solid;
+    border-color: seagreen;
+    border-radius: 5px;
+    margin: 20px
+}
+
 
 h1 {
     text-align: center;
     justify-content: center;
 }
 
+nav {
+    background-color: #C1E1C1;
+    width: 100%;
+} 
+
+.navbar {
+    background-color: #C1E1C1;
+    width: 100%;
+    height: 100%;
+
+}
+
+.nav-link {
+    background-color: #C1E1C1;
+    width: 210px;
+}
 
 .btn {
     background-color: #C1E1C1;
@@ -30,19 +55,10 @@ input {
 
 button {
     background-color: seagreen;
+    border-color: seagreen;
     width: 100%;
     margin-top: 5px;
     color: white;
     font-weight: 500;
 }
 
-.navbar {
-    height: 60px;
-    color: black;
-}
-
-@media (max-width: 767px) {
-    .navbar {
-        height: 80px; 
-    }
-}

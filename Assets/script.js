@@ -76,13 +76,26 @@ document.addEventListener("DOMContentLoaded", function () {
     function createButton(text, clickHandler) {
         const button = document.createElement("button");
         button.textContent = text;
-        button.addEventListener("click", clickHandler);
+        button.addEventListener("click", (event) => clickHandler(event));
         return button;
     }
 
     function exportToGroceryList(ingredients) {
         console.log("Grocery List:", ingredients);
-        groceriesList.innerHTML += `<li>${ingredients.map(ingredient => ingredient.text).join(', ')}</li>`;
+    
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `${ingredients.map(ingredient => ingredient.text).join(', ')} `;
+        
+        const deleteButton = createButton("Delete", (event) => deleteFromGroceryList(event));
+        listItem.appendChild(deleteButton);
+        
+        groceriesList.appendChild(listItem);
+    }
+
+    function deleteFromGroceryList(event) {
+        console.log("Deleting from Grocery List:", event);
+        const listItem = event.target.closest('li');
+    listItem.remove();
     }
 
     function saveRecipeToFavorites(recipe) {
