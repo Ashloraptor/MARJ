@@ -10,11 +10,12 @@ We created this application to help people with making grocery shopping and dinn
 <li>You are then able to save and delete the recipe ingredients from a generated shopping list based on the recipes that interest you.
 <li>Finally, you are able to save your favorite recipes so that you can pull up the needed ingredients if you want to cook that recipe again
 <br>
+<br>
 <br>All in all this application would be very useful to the person who is cooking in the household to be able to create lists without the fear of forgetting and ingredient and give them access to a load of recipes to make at the tip of their fingers. Dinner time will be made easier and add a lot of variety for everyone to enjoy!
 <br><h3>Technologies Used:
 <br> In our project we used Edamam
 <br>We used their Recipe Search API and their Food Database API
 <br><h4>Screenshot:</h4>
 <br><img src="/Assets/screenshot.png">
-<br>Deployed link:
+<br>Deployed link: https://ashloraptor.github.io/MARJ/
 <br>Repo link: https://github.com/Ashloraptor/MARJ
